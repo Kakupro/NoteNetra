@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark Theme Colors */
+    --color-background: #0a0a0a; /* Dark black */
+    --color-foreground: #ffffff; /* White text */
+    --color-border: #333333; /* Dark border */
+    --color-input: #2a2a2a; /* Dark input */
+    --color-ring: #0891b2; /* Teal/cyan-blue ring */
+    
+    /* Card Colors */
+    --color-card: #1e1e1e; /* Dark card */
+    --color-card-foreground: #ffffff; /* White text */
+    
+    /* Popover Colors */
+    --color-popover: #1e1e1e; /* Dark popover */
+    --color-popover-foreground: #ffffff; /* White text */
+    
+    /* Muted Colors */
+    --color-muted: #1a1a1a; /* Dark muted */
+    --color-muted-foreground: #a0a0a0; /* Muted text */
+    
+    /* Primary Colors */
+    --color-primary: #0891b2; /* Teal/cyan-blue primary */
+    --color-primary-foreground: #ffffff; /* White text */
+    
+    /* Secondary Colors */
+    --color-secondary: #0d9488; /* Teal secondary */
+    --color-secondary-foreground: #ffffff; /* White text */
+    
+    /* Accent Colors */
+    --color-accent: #0891b2; /* Teal/cyan-blue accent */
+    --color-accent-foreground: #ffffff; /* White text */
+    
+    /* Success Colors */
+    --color-success: #10b981; /* emerald-600 */
+    --color-success-foreground: #ffffff; /* White text */
+    
+    /* Warning Colors */
+    --color-warning: #f59e0b; /* amber-600 */
+    --color-warning-foreground: #ffffff; /* White text */
+    
+    /* Error/Destructive Colors */
+    --color-error: #ef4444; /* red-600 */
+    --color-error-foreground: #ffffff; /* White text */
+    --color-destructive: #ef4444; /* red-600 */
+    --color-destructive-foreground: #ffffff; /* White text */
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background-color: #0a0a0a !important;
+    color: #ffffff !important;
+  }
+  
+  html {
+    background-color: #0a0a0a !important;
+  }
+  
+  #root {
+    background-color: #0a0a0a !important;
+    min-height: 100vh;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .shadow-card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadow-interactive {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .transition-micro {
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-smooth {
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-large {
+    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: scale(1.02);
+  }
+  
+  .nav-spacing {
+    padding-left: clamp(1rem, 4vw, 2rem);
+    padding-right: clamp(1rem, 4vw, 2rem);
+  }
+  
+  .content-spacing {
+    padding-left: clamp(1rem, 4vw, 2rem);
+    padding-right: clamp(1rem, 4vw, 2rem);
+  }
+  
+  /* Dark Theme Utilities */
+  .bg-dark {
+    background-color: #0a0a0a !important;
+  }
+  
+  .bg-dark-card {
+    background-color: #1e1e1e !important;
+  }
+  
+  .bg-dark-secondary {
+    background-color: #111111 !important;
+  }
+  
+  .text-dark {
+    color: #ffffff !important;
+  }
+  
+  .text-dark-secondary {
+    color: #e0e0e0 !important;
+  }
+  
+  .border-dark {
+    border-color: #333333 !important;
+  }
+}
